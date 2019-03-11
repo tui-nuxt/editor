@@ -1,0 +1,10 @@
+# NodeJS
+node_modules/
+
+## NuxtJS
+.nuxt/
+dist/
+
+# Tools
+## IDEA
+.idea/
