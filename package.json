@@ -13,7 +13,8 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "npx nuxt test/template"
+    "dev": "npx nuxt test/template",
+    "lint": "eslint libs/module.js"
   },
   "homepage": "https://nuxt-tui.js.org",
   "repository": "git+https://github.com/nuxt-tui/nuxt-tui.git",
