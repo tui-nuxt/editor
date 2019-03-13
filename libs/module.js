@@ -26,12 +26,27 @@ module.exports = function () {
     this.options.css.push(optStyle.editor)
     this.options.css.push(optStyle.content)
 
+    /* add extensions */
+    const optExtensions = optEditor.extensions || opt.default.extensions
+    const officalExtensions = []
+    const localExtensions = []
+    for (const extension of optExtensions) {
+      if (extension.includes('/')) {
+        localExtensions.push(extension)
+      } else {
+        officalExtensions.push(extension)
+      }
+    }
+
     /* add plugin */
     this.addPlugin({
       mode: 'client',
       src: resolve(__dirname, 'tui-editor.client.js'),
       options: {
-        extensions: optEditor.extensions || []
+        extensions: {
+          offical: officalExtensions,
+          local: localExtensions
+        }
       }
     })
   }
