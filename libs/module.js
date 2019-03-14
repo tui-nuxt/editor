@@ -28,13 +28,16 @@ module.exports = function () {
 
     /* add extensions */
     const optExtensions = optEditor.extensions || opt.default.extensions
-    const officalExtensions = []
-    const localExtensions = []
-    for (const extension of optExtensions) {
-      if (extension.includes('/')) {
-        localExtensions.push(extension)
-      } else {
-        officalExtensions.push(extension)
+    const builtIn = ['chart', 'colorsyntax', 'scrollsync', 'table', 'uml']
+    const extensions = []
+
+    for (const ext of optExtensions) {
+      if (ext instanceof String) {
+        if (builtIn.includes(ext.toLowerCase())) {
+          extensions.push(`tui-editor/dist/tui-editor-ext${ext}`)
+        } else {
+          extensions.push(ext)
+        }
       }
     }
 
@@ -43,10 +46,7 @@ module.exports = function () {
       mode: 'client',
       src: resolve(__dirname, 'tui-editor.client.js'),
       options: {
-        extensions: {
-          offical: officalExtensions,
-          local: localExtensions
-        }
+        extensions
       }
     })
   }

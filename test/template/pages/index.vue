@@ -17,8 +17,7 @@ export default {
     navs: [
       { to: '/demo', name: 'Demo' },
       { to: '/basic', name: 'Basic' },
-      { to: '/viewer/basic', name: 'Viewer Basic' },
-      { to: '/extensions/scroll-sync', name: 'Scroll Sync' }
+      { to: '/viewer/basic', name: 'Viewer Basic' }
     ]
   })
 }
