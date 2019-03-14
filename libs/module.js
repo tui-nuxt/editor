@@ -32,7 +32,7 @@ module.exports = function () {
     const extensions = []
 
     for (const ext of optExtensions) {
-      if (ext instanceof String) {
+      if ((typeof ext) === 'string') {
         if (builtIn.includes(ext.toLowerCase())) {
           extensions.push(`tui-editor/dist/tui-editor-ext${ext}`)
         } else {
@@ -44,7 +44,8 @@ module.exports = function () {
     /* add plugin */
     this.addPlugin({
       mode: 'client',
-      src: resolve(__dirname, 'tui-editor.client.js'),
+      src: resolve(__dirname, 'tui-editor.ejs'),
+      fileName: 'tui-editor.client.js',
       options: {
         extensions
       }
