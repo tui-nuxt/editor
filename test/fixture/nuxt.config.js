@@ -1,5 +1,3 @@
-'use strict'
-
 const { resolve } = require('path')
 
 module.exports = {
@@ -8,17 +6,13 @@ module.exports = {
   srcDir: resolve(__dirname),
   buildDir: resolve(__dirname, '../../.nuxt'),
   modules: [
-    { handler: require('../../') }
+    {
+      handler: require('../../src/module.ts')
+    }
   ],
   tui: {
     editor: {
-      extensions: [
-        'scrollSync',
-        'colorSyntax',
-        'uml',
-        'table',
-        'chart'
-      ]
+      extensions: ['scrollSync', 'colorSyntax', 'uml', 'table', 'chart']
     }
   }
-}
+};

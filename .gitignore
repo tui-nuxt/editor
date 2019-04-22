@@ -1,10 +1,12 @@
-# NodeJS
+# ❌ GitIgnroe
+
+## IDE
+.idea/
+*.iml
+
+## JS
 node_modules/
 
-## NuxtJS
+### Nuxt.JS
 .nuxt/
 dist/
-
-# Tools
-## IDEA
-.idea/

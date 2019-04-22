@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "module": "es6"
+  },
+  "files": [
+    "src/module.ts"
+  ],
+  "exclude": ["node_modules"]
+}
