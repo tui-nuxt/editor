@@ -27,7 +27,7 @@ module.exports = function setTuiEditor() {
   const editor = options.editor || defaultOption.editor;
 
   if (editor !== false) {
-    const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet};
+    const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet };
 
     this.options.css.push(
       style.codemirror,
