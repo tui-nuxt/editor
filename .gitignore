@@ -1,0 +1,12 @@
+# ❌ GitIgnroe
+
+## IDE
+.idea/
+*.iml
+
+## JS
+node_modules/
+
+### Nuxt.JS
+.nuxt/
+src/module.js

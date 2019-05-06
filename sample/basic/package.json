@@ -1,0 +1,18 @@
+{
+  "name": "@tui-editor/editor-sample-basic",
+  "version": "1.0.0",
+  "description": "TOAST UI Editor for Nuxt.JS Basic Sample",
+  "author": "Kim Younggeon <mail@kyg.kr>",
+  "homepage": "https://github.com/nuxt-tui/editor/tree/master/sample/basic",
+  "repository": "git@github.com:nuxt-tui/editor.git",
+  "main": "nuxt.config.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "yarn nuxt"
+  },
+  "dependencies": {
+    "@nuxt-tui/editor": "^1.0.0-alpha.3",
+    "nuxt": "^2.6.3"
+  },
+  "devDependencies": {}
+}
