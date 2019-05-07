@@ -1,7 +1,6 @@
 import { resolve } from 'path';
 
 const defaultOption = {
-  usagesStatistics: true,
   editor: {
     stylesheet: {
       editor: 'tui-editor/dist/tui-editor.min.css',
@@ -49,9 +48,18 @@ module.exports = function setTuiEditor() {
     }
 
     this.addPlugin({
-      mode: 'client',
+      src: resolve(__dirname, 'components/editor.vue'),
+      fileName: 'tui/components/editor.vue'
+    });
+
+    this.addPlugin({
+      src: resolve(__dirname, 'components/editor-viewer.vue'),
+      fileName: 'tui/components/editor-viewer.vue'
+    });
+
+    this.addPlugin({
       src: resolve(__dirname, 'tui-editor.ejs.js'),
-      fileName: 'tui/editor.client.js',
+      fileName: 'tui/editor.js',
       options: {
         extensions: extensionPaths
       }

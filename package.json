@@ -20,20 +20,18 @@
   "files": [
     "src"
   ],
-  "main": "src/module.js",
+  "main": "src/index.js",
   "scripts": {
     "dev": "yarn nuxt test/fixture",
-    "build": "yarn tsc src/module.ts",
     "lint": "yarn eslint --ext .ts --ignore-path .gitignore src/",
     "pretest": "yarn lint",
     "test": "yarn jest",
     "precommit": "yarn lint",
-    "prepublish": "yarn test && yarn build"
+    "prepublish": "yarn test"
   },
   "dependencies": {
     "@nuxt/config": "^2.6.2",
-    "@toast-ui/vue-editor": "^1.1.1",
-    "tui-editor": "^1.4.0"
+    "@toast-ui/vue-editor": "^1.1.1"
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.6.2",
@@ -47,7 +45,6 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-vue": "^5.2.2",
     "jest": "^24.7.1",
-    "nuxt": "^2.6.2",
     "prettier": "^1.17.0",
     "ts-jest": "^24.0.2",
     "ts-node": "^8.1.0",
