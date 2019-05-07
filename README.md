@@ -63,7 +63,7 @@ export default {
     ]
   })
 };
-</script
+</script>
 ```
 [![Edit Editor basic sample](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xpyvk5wzwz?fontsize=14&module=%2Fpages%2Findex.vue)
 
