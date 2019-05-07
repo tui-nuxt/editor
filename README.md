@@ -65,7 +65,7 @@ export default {
 };
 </script>
 ```
-[![Edit Editor basic sample](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/xpyvk5wzwz?fontsize=14&module=%2Fpages%2Findex.vue)
+[![TOAST UI Editor for Nuxt.JS basic demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nuxt-tui/editor/tree/dev/sample/basic?fontsize=14&module=%2Fpages%2Findex.vue)
 
 ## Options
 ### stylesheet
