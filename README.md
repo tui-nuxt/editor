@@ -106,6 +106,7 @@ See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-edito
 ### tui.editor
  - type: ```boolean``` or ```object```
  - default: true
+
 The root configuration object for ```@nuxt-tui/editor```. If false, module is disabled.
 
 ```javascript
