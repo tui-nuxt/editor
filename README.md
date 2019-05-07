@@ -1,43 +1,63 @@
 <h1 align="center">🍞📝 TOAST UI Editor for Nuxt.JS</h1>
 <p align="center">
-    <a href="https://github.com/nhn/toast-ui.vue-editor"><b>TOAST UI Editor for Vue</b></a> wrapping module
+  <a href="https://github.com/nhn/toast-ui.vue-editor"><b>TOAST UI Editor for Vue</b></a> wrapping module
 </p>
 <p align="center">
-    <a href="https://www.npmjs.com/package/@nuxt-tui/editor">
-        <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@nuxt-tui/editor.svg?style=flat-square">
-    </a>
-    <a href="./LICENSE">
-        <img alt="GitHub" src="https://img.shields.io/github/license/nuxt-tui/editor.svg?style=flat-square">
-    </a>
-    <img alt="Code style is airbnb" src="https://img.shields.io/badge/code%20style-airbnb-success.svg?style=flat-square" />
-    <a href="https://www.codefactor.io/repository/github/nuxt-tui/editor">
-      <img src="https://www.codefactor.io/repository/github/nuxt-tui/editor/badge" alt="CodeFactor" />
-    </a>
-    <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor?ref=badge_shield" alt="FOSSA Status">
-      <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor.svg?type=shield"/>
-    </a>
+  <a href="https://www.npmjs.com/package/@nuxt-tui/editor">
+      <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@nuxt-tui/editor.svg?style=flat-square">
+  </a>
+  <a href="./LICENSE">
+      <img alt="GitHub" src="https://img.shields.io/github/license/nuxt-tui/editor.svg?style=flat-square">
+  </a>
+  <img alt="Code style is airbnb" src="https://img.shields.io/badge/code%20style-airbnb-success.svg?style=flat-square" />
+  <a href="https://lgtm.com/projects/g/nuxt-tui/editor/alerts/">
+    <img src="https://img.shields.io/lgtm/grade/javascript/g/nuxt-tui/editor.svg?style=flat-square" />
+  </a>
+</p>
+<p align="center">
+  <a href="https://www.codefactor.io/repository/github/nuxt-tui/editor">
+    <img src="https://www.codefactor.io/repository/github/nuxt-tui/editor/badge" alt="CodeFactor" />
+  </a>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor.svg?type=shield"/>
+  </a>
 </p>
 
-## Install
+## 🚩Table of Contents
+- [🚩Table of Contents](#table-of-contents)
+- [🔰Getting Started](#getting-started)
+  - [💿Installation](#installation)
+  - [🔌Configuration](#configuration)
+  - [👋Hello world!](#hello-world)
+- [✒️Editor](#️editor)
+- [📃Viewer](#viewer)
+- [✅Options](#options)
+
+## 🔰Getting Started
+### 💿Installation
+yarn:
 ```bash
 $ yarn add @nuxt-tui/editor
-# or
+```
+
+npm:
+```bash
 $ npm install --save @nuxt-tui/editor
 ```
 
-## Setup
+### 🔌Configuration
 ```javascript
 // nuxt.config.js
 module.exports = {
   // ...
-  modules: ['@nuxt-tui/editor']
+  modules: ['@nuxt-tui/editor'],
   tui: {
-    editor: true // or options
+    editor: true
   }
-}
+};
 ```
 
-## Usage
+### 👋Hello world!
 ```html
 <template>
   <div id="top">
@@ -58,78 +78,112 @@ module.exports = {
 <script>
 export default {
   data: ({
-    content: [
-      'Hello World'
-    ]
+    content: 'Hello World!'
   })
 };
 </script>
 ```
+
 [![TOAST UI Editor for Nuxt.JS basic demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nuxt-tui/editor/tree/dev/sample/basic?fontsize=14&module=%2Fpages%2Findex.vue)
 
-## Options
-### stylesheet
- - type: object
+## ✒️Editor
+```html
+<template>
+  <TuiEditor />
+</template>
+```
+See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-editor#props) for options used in the ```<TuiEditor />```.
 
-Editor custom stylesheet. [read more](https://nuxtjs.org/api/configuration-css)
+## 📃Viewer
+```html
+<template>
+  <TuiEditorViwer />
+</template>
+```
+See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-editor#props-1) for options used in the ```<TuiEditorViewer />```.
 
-default:
+## ✅Options
+
+### tui.editor
+ - type: ```boolean``` or ```object```
+ - default: true
+The root configuration object for ```@nuxt-tui/editor```. If false, module is disabled.
+
 ```javascript
-export default {
+// nuxt.config.js
+module.exports = {
   tui: {
-    editor: {
-      stylesheet: {
-          editor: 'tui-editor/dist/tui-editor.min.css',
-          contents: 'tui-editor/dist/tui-editor-contents.min.css',
-          codemirror: 'codemirror/lib/codemirror.css',
-          codeHighlight: 'highlight.js/styles/github.css',
-          colorPicker: 'tui-color-picker/dist/tui-color-picker.min.css'
-        },
-        // ...
-    }
+    editor: true,
+    // or
+    editor: {}
   }
 }
 ```
-
-#### stylesheet.editor
- - type: string
-
-editor stylesheet
-
-#### stylesheet.contents
- - type: string
-
-viewer stylesheet
-
-#### stylesheet.codemirror
- - type: string
-
-wysiwyg editor style
-
-#### stylesheet.codeHighlight
- - type: string
-
-code block style
-
-#### stylesheet.colorPicker
- - type: string
-
-tui-color-picker style
-
-### extensions
+#### extensions
  - type: array
-    - item: string
+ - default: ```[]```
 
-tui-editor extension list
-
-default:
+Declares extension of tui-editor. builit in extension is ```chart```, ```colorSyntax```, ```scrollSync```, ```table```, ```uml```
 ```javascript
-export default {
+{
   tui: {
     editor: {
-      // ...
       extensions: []
     }
   }
 }
 ```
+
+#### stylesheet
+  - type: object
+
+Custom stylesheet path. for more information, see [Nuxt.js css property](https://nuxtjs.org/api/configuration-css)
+
+default:
+```javascript
+  {
+    tui: {
+      editor: {
+        stylesheet: {
+          editor: 'tui-editor/dist/tui-editor.min.css',
+          contents: 'tui-editor/dist/tui-editor-contents.min.css',
+          codemirror: 'codemirror/lib/codemirror.css',
+          codeHighlight: 'highlight.js/styles/github.css',
+          colorPicker: 'tui-color-picker/dist/tui-color-picker.min.css'
+        }
+      }
+    }
+  }
+  ```
+
+##### stylesheet.editor
+ - type: string
+ - default: ```tui-editor/dist/tui-editor.min.css```
+
+```<TuiEditor />``` stylesheet path
+
+
+##### stylesheet.contents
+  - type: string
+  - default: ```tui-editor/dist/tui-editor-contents.min.css```
+
+```<TuiEditorViewer />``` & wiziwig mode preview stylesheet path
+
+
+##### stylesheet.codemirror
+  - type: string
+  - default: ```codemirror/lib/codemirror.css```
+
+Markdown mode preview stylesheet path
+
+##### stylesheet.codehightlight
+  - type: string
+  - default: ```highlight.js/styles/github.css```
+
+Codeblock's code highlight stylesheet path
+
+##### stylesheet.colorPicker
+  - type: string
+  - default: ```tui-color-picker/dist/tui-color-picker.min.css```
+
+```tui-color-picker``` stylesheet path
