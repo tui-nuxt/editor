@@ -1,12 +1,12 @@
 'use strict';
 
 import Vue from 'vue';
-import { Editor, Viewer } from '@toast-ui/vue-editor';
 
+import TuiEditor from './components/editor.vue';
+import TuiEditorViewer from './components/editor-viewer.vue';
 
-
-Vue.component('TuiEditor', Editor);
-Vue.component('TuiEditorViewer', Viewer);
+Vue.component('TuiEditor', TuiEditor);
+Vue.component('TuiEditorViewer', TuiEditorViewer);
 
 <% for (const extension of options.extensions) { %>
 import('<%=extension%>');
