@@ -2,8 +2,8 @@
 
 import Vue from 'vue';
 
-import TuiEditor from './components/editor.vue';
-import TuiEditorViewer from './components/editor-viewer.vue';
+import TuiEditor from './components/editor';
+import TuiEditorViewer from './components/editor-viewer';
 
 Vue.component('TuiEditor', TuiEditor);
 Vue.component('TuiEditorViewer', TuiEditorViewer);

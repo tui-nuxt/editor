@@ -48,13 +48,13 @@ module.exports = function setTuiEditor() {
     }
 
     this.addPlugin({
-      src: resolve(__dirname, 'components/editor.vue'),
-      fileName: 'tui/components/editor.vue'
+      src: resolve(__dirname, 'components/editor.js'),
+      fileName: 'tui/components/editor.js'
     });
 
     this.addPlugin({
-      src: resolve(__dirname, 'components/editor-viewer.vue'),
-      fileName: 'tui/components/editor-viewer.vue'
+      src: resolve(__dirname, 'components/editor-viewer.js'),
+      fileName: 'tui/components/editor-viewer.js'
     });
 
     this.addPlugin({

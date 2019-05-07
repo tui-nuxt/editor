@@ -1,8 +1,3 @@
-<template>
-  <div ref="tuiEditorViewer"></div>
-</template>
-
-<script>
 const meta = {
   name: 'TuiEditorViewer'
 };
@@ -10,4 +5,3 @@ const meta = {
 if (process.client) meta.extends = require('@toast-ui/vue-editor').Viewer;
 
 export default meta;
-</script>
