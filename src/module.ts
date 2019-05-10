@@ -23,8 +23,11 @@ const builtInExtensions = [
 ];
 
 module.exports = function setTuiEditor() {
-  const options = this.options.tui || {};
-  const editor = options.editor || defaultOption.editor;
+  const tui = this.options.tui || {};
+  const editor = {
+    ...tui.editor,
+    ...defaultOption.editor
+  };
 
   if (editor !== false) {
     const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet };
