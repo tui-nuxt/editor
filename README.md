@@ -51,7 +51,7 @@ module.exports = {
   // ...
   modules: ['@nuxt-tui/editor'],
   tui: {
-    editor: true
+    editor: {}
   }
 };
 ```
@@ -105,7 +105,7 @@ See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-edito
 
 ### tui.editor
  - type: ```boolean``` or ```object```
- - default: true
+ - default: ```{}```
 
 The root configuration object for ```@nuxt-tui/editor```. If false, module is disabled.
 
@@ -113,7 +113,7 @@ The root configuration object for ```@nuxt-tui/editor```. If false, module is di
 // nuxt.config.js
 module.exports = {
   tui: {
-    editor: true,
+    editor: false, // disable module
     // or
     editor: {}
   }
