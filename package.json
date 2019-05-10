@@ -32,8 +32,7 @@
   },
   "dependencies": {
     "@nuxt/config": "^2.6.2",
-    "@toast-ui/vue-editor": "^1.1.1",
-    "tui-editor": "^1.4.0"
+    "@toast-ui/vue-editor": "~1.1.1"
   },
   "devDependencies": {
     "@nuxt/typescript": "^2.6.2",
@@ -52,5 +51,9 @@
     "ts-jest": "^24.0.2",
     "ts-node": "^8.1.0",
     "typescript": "^3.4.4"
+  },
+  "peerDependencies": {
+    "vue": "^2.5.1",
+    "webpack": "^4.31.0"
   }
 }
