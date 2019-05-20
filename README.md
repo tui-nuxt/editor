@@ -18,8 +18,8 @@
   <a href="https://www.codefactor.io/repository/github/tui-nuxt/editor">
     <img src="https://www.codefactor.io/repository/github/tui-nuxt/editor/badge" alt="CodeFactor" />
   </a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Ftui-nuxt%2Feditor?ref=badge_shield" alt="FOSSA Status">
-    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftui-nuxt%2Feditor.svg?type=shield"/>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor.svg?type=shield"/>
   </a>
 </p>
 
