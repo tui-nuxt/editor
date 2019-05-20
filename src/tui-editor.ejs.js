@@ -11,12 +11,12 @@ Vue.component('TuiEditor', {
       const defaultOption = JSON.parse('<%=options.editorOption%>')
 
       const options = Object.assign({}, defaultOption, this.options)
-      options.initialValue = this.value;
-      options.initialEditType = this.mode;
-      options.height = this.height;
-      options.previewStyle = this.previewStyle;
+      options.initialValue = this.value
+      options.initialEditType = this.mode
+      options.height = this.height
+      options.previewStyle = this.previewStyle
 
-      return options;
+      return options
     }
   }
 })
