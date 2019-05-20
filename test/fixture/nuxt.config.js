@@ -12,7 +12,7 @@ module.exports = {
   ],
   tui: {
     editor: {
-      extensions: ['scrollSync', 'colorSyntax', 'uml', 'table', 'chart']
+      exts: ['scrollSync', 'colorSyntax', 'uml', 'table', 'chart']
     }
   }
 }

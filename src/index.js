@@ -1,8 +1,8 @@
 import { resolve } from 'path'
 
 const defaultTui = {
-  usagesStatistics: true,
   editor: {
+    // @tui-nuxt option
     stylesheet: {
       editor: 'tui-editor/dist/tui-editor.min.css',
       contents: 'tui-editor/dist/tui-editor-contents.min.css',
@@ -10,7 +10,42 @@ const defaultTui = {
       codeHighlight: 'highlight.js/styles/github.css',
       colorPicker: 'tui-color-picker/dist/tui-color-picker.min.css'
     },
-    extensions: []
+    exts: [],
+    // tui-editor option
+    usagesStatistics: true,
+    minHeight: '200px',
+    useCommandShortcut: true,
+    useDefaultHTMLSanitizer: true,
+    hideModeSwitch: false,
+    toolbarItems: [
+      'heading',
+      'bold',
+      'italic',
+      'strike',
+
+      'divider', // |
+
+      'hr',
+      'quote',
+
+      'divider', // |
+
+      'ul',
+      'ol',
+      'task',
+      'indent',
+      'outdent',
+
+      'divider', // |
+      'table',
+      'image',
+      'link',
+
+      'divider', // |
+
+      'code',
+      'codeblock'
+    ]
   }
 }
 
@@ -24,32 +59,36 @@ const builtInExtensions = [
 
 module.exports = function setTuiEditor() {
   const tui = this.options.tui || {}
-  const editor = merge(defaultTui.editor, tui.editor)
-  console.log(editor)
-  if (editor !== false) {
+  const options = merge(defaultTui.editor, tui.editor)
+
+  if (options !== false) {
     this.options.css.push(
-      editor.stylesheet.codemirror,
-      editor.stylesheet.editor,
-      editor.stylesheet.contents,
-      editor.stylesheet.codeHighlight,
-      editor.stylesheet.colorPicker
+      options.stylesheet.codemirror,
+      options.stylesheet.editor,
+      options.stylesheet.contents,
+      options.stylesheet.codeHighlight,
+      options.stylesheet.colorPicker
     )
 
-    const extensions = []
-    for (const extension of editor.extensions) {
+    const exts = []
+    for (const extension of options.exts) {
       if (builtInExtensions.includes(extension.toLowerCase())) {
-        extensions.push(`tui-editor/dist/tui-editor-ext${extension}`)
+        exts.push(`tui-editor/dist/tui-editor-ext${extension}`)
       } else {
-        extensions.push(extension)
+        exts.push(extension)
       }
     }
+
+    const editorOption = Object.assign(options)
+    delete editorOption.stylesheet
 
     this.addPlugin({
       mode: 'client',
       src: resolve(__dirname, 'tui-editor.ejs.js'),
       fileName: 'tui/editor.client.js',
       options: {
-        extensions
+        exts,
+        editorOption: JSON.stringify(editorOption)
       }
     })
   }
