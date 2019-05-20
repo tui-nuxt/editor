@@ -1,6 +1,6 @@
 import { resolve } from 'path'
 
-const defaultOption = {
+const defaultTui = {
   usagesStatistics: true,
   editor: {
     stylesheet: {
@@ -24,30 +24,23 @@ const builtInExtensions = [
 
 module.exports = function setTuiEditor() {
   const tui = this.options.tui || {}
-  const editor = {
-    ...tui.editor,
-    ...defaultOption.editor
-  }
-
+  const editor = merge(defaultTui.editor, tui.editor)
+  console.log(editor)
   if (editor !== false) {
-    const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet }
-
     this.options.css.push(
-      style.codemirror,
-      style.editor,
-      style.contents,
-      style.codeHighlight,
-      style.colorPicker
+      editor.stylesheet.codemirror,
+      editor.stylesheet.editor,
+      editor.stylesheet.contents,
+      editor.stylesheet.codeHighlight,
+      editor.stylesheet.colorPicker
     )
 
-    const extensions = editor.extensions || defaultOption.editor.extensions
-    const extensionPaths = []
-
-    for (const extension of extensions) {
+    const extensions = []
+    for (const extension of editor.extensions) {
       if (builtInExtensions.includes(extension.toLowerCase())) {
-        extensionPaths.push(`tui-editor/dist/tui-editor-ext${extension}`)
+        extensions.push(`tui-editor/dist/tui-editor-ext${extension}`)
       } else {
-        extensionPaths.push(extension)
+        extensions.push(extension)
       }
     }
 
@@ -56,10 +49,34 @@ module.exports = function setTuiEditor() {
       src: resolve(__dirname, 'tui-editor.ejs.js'),
       fileName: 'tui/editor.client.js',
       options: {
-        extensions: extensionPaths
+        extensions
       }
     })
   }
 }
 
 module.exports.meta = require('../package.json')
+
+function merge(defaultOption, userOption) {
+  if (userOption == null) return defaultOption
+
+  const object = {}
+
+  for (let key of Object.keys(defaultOption)) {
+    if (typeof userOption[key] === 'undefined' || userOption[key] == null) {
+      object[key] = defaultOption[key] // 기본 값 입력
+    } else {
+      const value = userOption[key]
+
+      if (value instanceof Array || value instanceof Function) {
+        object[key] = value
+      } else if (value instanceof Object) {
+        object[key] = merge(defaultOption[key], value)
+      } else {
+        object[key] = value
+      }
+    }
+  }
+
+  return object
+}
