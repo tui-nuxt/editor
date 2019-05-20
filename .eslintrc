@@ -1,0 +1,26 @@
+{
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "parserOptions": {
+    "parser": "babel-eslint"
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:vue/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": [
+    "vue",
+    "ejs"
+  ],
+  "rules": {
+    "semi": [2, "never"],
+    "no-console": "off",
+    "vue/max-attributes-per-line": "off",
+    "prettier/prettier": ["error", { "semi": false }]
+  }
+}

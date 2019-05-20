@@ -1,4 +1,4 @@
-import { resolve } from 'path';
+import { resolve } from 'path'
 
 const defaultOption = {
   usagesStatistics: true,
@@ -12,7 +12,7 @@ const defaultOption = {
     },
     extensions: []
   }
-};
+}
 
 const builtInExtensions = [
   'chart',
@@ -20,17 +20,17 @@ const builtInExtensions = [
   'scrollSync'.toLowerCase(),
   'table',
   'uml'
-];
+]
 
 module.exports = function setTuiEditor() {
-  const tui = this.options.tui || {};
+  const tui = this.options.tui || {}
   const editor = {
     ...tui.editor,
     ...defaultOption.editor
-  };
+  }
 
   if (editor !== false) {
-    const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet };
+    const style = { ...{}, ...defaultOption.editor.stylesheet, ...editor.stylesheet }
 
     this.options.css.push(
       style.codemirror,
@@ -38,16 +38,16 @@ module.exports = function setTuiEditor() {
       style.contents,
       style.codeHighlight,
       style.colorPicker
-    );
+    )
 
-    const extensions = editor.extensions || defaultOption.editor.extensions;
-    const extensionPaths = [];
+    const extensions = editor.extensions || defaultOption.editor.extensions
+    const extensionPaths = []
 
     for (const extension of extensions) {
       if (builtInExtensions.includes(extension.toLowerCase())) {
-        extensionPaths.push(`tui-editor/dist/tui-editor-ext${extension}`);
+        extensionPaths.push(`tui-editor/dist/tui-editor-ext${extension}`)
       } else {
-        extensionPaths.push(extension);
+        extensionPaths.push(extension)
       }
     }
 
@@ -58,8 +58,8 @@ module.exports = function setTuiEditor() {
       options: {
         extensions: extensionPaths
       }
-    });
+    })
   }
-};
+}
 
-module.exports.meta = require('../package.json');
+module.exports.meta = require('../package.json')

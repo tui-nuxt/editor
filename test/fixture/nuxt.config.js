@@ -7,7 +7,7 @@ module.exports = {
   buildDir: resolve(__dirname, '../../.nuxt'),
   modules: [
     {
-      handler: require('../../src/module.ts')
+      handler: require('../../src')
     }
   ],
   tui: {
