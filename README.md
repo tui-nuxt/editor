@@ -3,23 +3,23 @@
   <a href="https://github.com/nhn/toast-ui.vue-editor"><b>TOAST UI Editor for Vue</b></a> wrapping module
 </p>
 <p align="center">
-  <a href="https://www.npmjs.com/package/@nuxt-tui/editor">
-      <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@nuxt-tui/editor.svg?style=flat-square">
+  <a href="https://www.npmjs.com/package/@tui-nuxt/editor">
+      <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@tui-nuxt/editor.svg?style=flat-square">
   </a>
   <a href="./LICENSE">
-      <img alt="GitHub" src="https://img.shields.io/github/license/nuxt-tui/editor.svg?style=flat-square">
+      <img alt="GitHub" src="https://img.shields.io/github/license/tui-nuxt/editor.svg?style=flat-square">
   </a>
   <img alt="Code style is airbnb" src="https://img.shields.io/badge/code%20style-airbnb-success.svg?style=flat-square" />
-  <a href="https://lgtm.com/projects/g/nuxt-tui/editor/alerts/">
-    <img src="https://img.shields.io/lgtm/grade/javascript/g/nuxt-tui/editor.svg?style=flat-square" />
+  <a href="https://lgtm.com/projects/g/tui-nuxt/editor/alerts/">
+    <img src="https://img.shields.io/lgtm/grade/javascript/g/tui-nuxt/editor.svg?style=flat-square" />
   </a>
 </p>
 <p align="center">
-  <a href="https://www.codefactor.io/repository/github/nuxt-tui/editor">
-    <img src="https://www.codefactor.io/repository/github/nuxt-tui/editor/badge" alt="CodeFactor" />
+  <a href="https://www.codefactor.io/repository/github/tui-nuxt/editor">
+    <img src="https://www.codefactor.io/repository/github/tui-nuxt/editor/badge" alt="CodeFactor" />
   </a>
-  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor?ref=badge_shield" alt="FOSSA Status">
-    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor.svg?type=shield"/>
+  <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Ftui-nuxt%2Feditor?ref=badge_shield" alt="FOSSA Status">
+    <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftui-nuxt%2Feditor.svg?type=shield"/>
   </a>
 </p>
 
@@ -36,12 +36,12 @@
 ### 💿Installation
 yarn:
 ```bash
-$ yarn add @nuxt-tui/editor
+$ yarn add @tui-nuxt/editor
 ```
 
 npm:
 ```bash
-$ npm install --save @nuxt-tui/editor
+$ npm install --save @tui-nuxt/editor
 ```
 
 ### 🔌Configuration
@@ -49,7 +49,7 @@ $ npm install --save @nuxt-tui/editor
 // nuxt.config.js
 module.exports = {
   // ...
-  modules: ['@nuxt-tui/editor'],
+  modules: ['@tui-nuxt/editor'],
   tui: {
     editor: {}
   }
@@ -83,7 +83,7 @@ export default {
 </script>
 ```
 
-[![TOAST UI Editor for Nuxt.JS basic demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/nuxt-tui/editor/tree/dev/sample/basic?fontsize=14&module=%2Fpages%2Findex.vue)
+[![TOAST UI Editor for Nuxt.JS basic demo](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/tui-nuxt/editor/tree/dev/sample/basic?fontsize=14&module=%2Fpages%2Findex.vue)
 
 ## ✒️Editor
 ```html
@@ -107,7 +107,7 @@ See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-edito
  - type: ```boolean``` or ```object```
  - default: ```{}```
 
-The root configuration object for ```@nuxt-tui/editor```. If false, module is disabled.
+The root configuration object for ```@tui-nuxt/editor```. If false, module is disabled.
 
 ```javascript
 // nuxt.config.js
