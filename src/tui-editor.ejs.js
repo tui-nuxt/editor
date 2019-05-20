@@ -22,6 +22,6 @@ Vue.component('TuiEditor', {
 })
 Vue.component('TuiEditorViewer', Viewer)
 
-<% for (const extension of options.extensions) { %>
+<% for (const extension of options.exts) { %>
   import('<%=extension%>')
 <% } %>

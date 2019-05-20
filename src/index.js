@@ -10,7 +10,7 @@ const defaultTui = {
       codeHighlight: 'highlight.js/styles/github.css',
       colorPicker: 'tui-color-picker/dist/tui-color-picker.min.css'
     },
-    extensions: [],
+    exts: [],
     // tui-editor option
     usagesStatistics: true,
     minHeight: '200px',
@@ -70,25 +70,24 @@ module.exports = function setTuiEditor() {
       options.stylesheet.colorPicker
     )
 
-    const extensions = []
-    for (const extension of options.extensions) {
+    const exts = []
+    for (const extension of options.exts) {
       if (builtInExtensions.includes(extension.toLowerCase())) {
-        extensions.push(`tui-editor/dist/tui-editor-ext${extension}`)
+        exts.push(`tui-editor/dist/tui-editor-ext${extension}`)
       } else {
-        extensions.push(extension)
+        exts.push(extension)
       }
     }
 
     const editorOption = Object.assign(options)
     delete editorOption.stylesheet
-    delete editorOption.extensions
 
     this.addPlugin({
       mode: 'client',
       src: resolve(__dirname, 'tui-editor.ejs.js'),
       fileName: 'tui/editor.client.js',
       options: {
-        extensions,
+        exts,
         editorOption: JSON.stringify(editorOption)
       }
     })

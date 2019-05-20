@@ -119,7 +119,7 @@ module.exports = {
   }
 }
 ```
-#### extensions
+#### exts
  - type: array
  - default: ```[]```
 
@@ -128,7 +128,7 @@ Declares extension of tui-editor. builit in extension is ```chart```, ```colorSy
 {
   tui: {
     editor: {
-      extensions: []
+      exts: []
     }
   }
 }
