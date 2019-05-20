@@ -1,6 +1,6 @@
 {
   "name": "@tui-nuxt/editor",
-  "version": "1.0.0-alpha.3",
+  "version": "1.0.0-alpha.4",
   "description": "TOAST UI Editor for Nuxt.JS",
   "author": "Kim Younggeon <mail@kyg.kr>",
   "homepage": "https://tui-nuxt.js.org",
