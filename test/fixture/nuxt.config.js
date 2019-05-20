@@ -15,4 +15,4 @@ module.exports = {
       extensions: ['scrollSync', 'colorSyntax', 'uml', 'table', 'chart']
     }
   }
-};
+}
