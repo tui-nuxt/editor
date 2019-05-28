@@ -8,7 +8,15 @@ Vue.component('TuiEditor', {
   extends: Editor,
   computed: {
     editorOptions: function() {
-      const defaultOption = JSON.parse('<%=options.editorOption%>')
+      let defaultOption = JSON.parse('<%=options.editorOption%>')
+
+      if (this.$metaInfo != null) {
+        const defaultLanguage = {
+          language: this.$metaInfo.meta.find((e) => e.hid === 'og:locale').content || 'en_US'
+        }
+
+        defaultOption = Object.assign({}, defaultLanguage, defaultOption)
+      }
 
       const options = Object.assign({}, defaultOption, this.options)
       options.initialValue = this.value

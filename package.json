@@ -55,5 +55,8 @@
     "prettier": "^1.17.0",
     "vue": "^2.5.1",
     "webpack": "^4.31.0"
+  },
+  "peerDependencies": {
+    "nuxt-i18n": "^5.12.3"
   }
 }
