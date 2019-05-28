@@ -99,23 +99,23 @@ module.exports.meta = require('../package.json')
 function merge(defaultOption, userOption) {
   if (userOption == null) return defaultOption
 
-  const object = {}
+  const resultObj = {}
 
   for (let key of Object.keys(defaultOption)) {
     if (typeof userOption[key] === 'undefined' || userOption[key] == null) {
-      object[key] = defaultOption[key] // 기본 값 입력
+      resultObj[key] = defaultOption[key] // set default value
     } else {
       const value = userOption[key]
 
       if (value instanceof Array || value instanceof Function) {
-        object[key] = value
+        resultObj[key] = value
       } else if (value instanceof Object) {
-        object[key] = merge(defaultOption[key], value)
+        resultObj[key] = merge(defaultOption[key], value)
       } else {
-        object[key] = value
+        resultObj[key] = value
       }
     }
   }
 
-  return object
+  return resultObj
 }
