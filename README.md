@@ -3,9 +3,6 @@
   <a href="https://github.com/nhn/toast-ui.vue-editor"><b>TOAST UI Editor for Vue</b></a> wrapping module
 </p>
 <p align="center">
-  <b>⚠️This project is still under development and should not be used in a production environment. If you want to use tui-editor please refer to the issue <a href="https://github.com/nhn/toast-ui.vue-editor/issues/24#issuecomment-485347493">nhn/toast-ui.vue-editor#24</a>⚠️</b>
-</p> 
-<p align="center">
   <a href="https://www.npmjs.com/package/@tui-nuxt/editor">
       <img alt="npm (scoped)" src="https://img.shields.io/npm/v/@tui-nuxt/editor.svg?style=flat-square">
   </a>
@@ -24,6 +21,9 @@
   <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor?ref=badge_shield" alt="FOSSA Status">
     <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnuxt-tui%2Feditor.svg?type=shield"/>
   </a>
+</p>
+<p align="center">
+  <b>⚠️This project is still under development and should not be used in a production environment. If you want to use tui-editor please refer to the issue <a href="https://github.com/nhn/toast-ui.vue-editor/issues/24#issuecomment-485347493">nhn/toast-ui.vue-editor#24</a>⚠️</b>
 </p>
 
 ## 🚩Table of Contents
