@@ -12,7 +12,7 @@ Vue.component('TuiEditor', {
 
       if (this.$metaInfo != null) {
         const defaultLanguage = {
-          language: this.$metaInfo.meta.find((e) => e.hid === 'og:locale').content || 'en_US'
+          language: this.$metaInfo.meta.find(e => e.hid === 'og:locale').content || 'en_US'
         }
 
         defaultOption = Object.assign({}, defaultLanguage, defaultOption)
