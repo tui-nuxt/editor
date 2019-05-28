@@ -111,6 +111,10 @@ See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-edito
 ```
 See the [toast-ui.vue-editor document](https://github.com/nhn/toast-ui.vue-editor#props-1) for options used in the ```<TuiEditorViewer />```.
 
+## 🔠Internationalization
+```@tui-nuxt/editor``` detects the ```nuxt-i18n``` module and automatically sets it to the language of the current page.
+However, if you do not use nuxt-i18n or want to use a different language, please refer to [options.language](#language)
+
 ## ✅Options
 
 ### tui.editor
@@ -129,6 +133,14 @@ module.exports = {
   }
 }
 ```
+editor language ISO code. See more [support language](https://github.com/nhn/tui.editor/tree/master/src/js/langs)
+
+#### language
+ - type: String
+ - default:
+   - enable ```nuxt-i18n```: current language
+   - other: ```en_US```
+
 #### exts
  - type: array
  - default: ```[]```
