@@ -23,7 +23,14 @@
   </a>
 </p>
 <p align="center">
-  <b>⚠️This project is still under development and should not be used in a production environment. If you want to use tui-editor please refer to the issue <a href="https://github.com/nhn/toast-ui.vue-editor/issues/24#issuecomment-485347493">nhn/toast-ui.vue-editor#24</a>⚠️</b>
+  <b>
+    ⚠️This project is still under development and should not be used in a production environment. <br />
+    If you want to use tui-editor please refer to the issue
+    <a href="https://github.com/nhn/toast-ui.vue-editor/issues/24#issuecomment-485347493">
+      nhn/toast-ui.vue-editor#24
+    </a>
+    ⚠️
+  </b>
 </p>
 
 ## 🚩Table of Contents
