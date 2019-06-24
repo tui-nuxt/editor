@@ -133,13 +133,14 @@ module.exports = {
   }
 }
 ```
-editor language ISO code. See more [support language](https://github.com/nhn/tui.editor/tree/master/src/js/langs)
 
 #### language
  - type: String
  - default:
    - enable ```nuxt-i18n```: current language
    - other: ```en_US```
+
+editor language ISO code. See more [support language](https://github.com/nhn/tui.editor/tree/master/src/js/langs)
 
 #### exts
  - type: array
