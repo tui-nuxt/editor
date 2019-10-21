@@ -1,6 +1,6 @@
 {
   "name": "@tui-nuxt/editor",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-beta.0",
   "description": "Easy integration on TOAST UI Editor for Nuxt.JS",
   "author": "Kim Younggeon <mail@kyg.kr>",
   "license": "MIT",
@@ -27,7 +27,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "dev": "nuxt test/fixture",
-    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "release": "standard-version"
   },
   "dependencies": {
     "@toast-ui/vue-editor": "^1.1.1"
@@ -49,6 +50,7 @@
     "jest": "^24.9.0",
     "nuxt": "^2.10.1",
     "standard": "^14.3.1",
+    "standard-version": "^7.0.0",
     "ts-jest": "^24.1.0",
     "typescript": "^3.6.4"
   }
