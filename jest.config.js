@@ -1,6 +1,11 @@
 module.exports = {
   transform: {
-    '^.+\\.js$': 'babel-jest'
+    '^.+\\.ts$': 'ts-jest'
   },
-  moduleFileExtensions: ['js', 'json', 'vue']
+  testEnvironment: 'node',
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'lib/**/*.ts',
+    '!lib/plugins/**/*'
+  ]
 }

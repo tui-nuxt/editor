@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strict": true,
+    "sourceMap": true,
+    "outDir": "./dist",
+    "esModuleInterop": true,
+    "declaration": true,
+    "types": ["tui-editor"]
+  },
+  "include": ["lib/**/*"],
+  "exclude": ["node_modules"]
+}
