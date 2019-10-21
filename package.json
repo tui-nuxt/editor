@@ -34,7 +34,9 @@
     "release": "yarn build && standard-version --prerelease && yarn publish"
   },
   "dependencies": {
-    "@toast-ui/vue-editor": "^1.1.1"
+    "@toast-ui/vue-editor": "^1.1.1",
+    "consola": "^2.10.1",
+    "lodash.merge": "^4.6.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.2.0",
