@@ -1,12 +1,17 @@
 # ❌ GitIgnroe
 
+## global
+*.log
+
 ## IDE
+.vscode/
 .idea/
-*.iml
 
-## JS
+## nodejs
 node_modules/
+coverage/
+package-lock.json
 
-### Nuxt.JS
+### nuxtjs
 .nuxt/
-src/module.js
+dist/
