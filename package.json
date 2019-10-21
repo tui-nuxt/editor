@@ -26,9 +26,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "dev": "nuxt test/fixture",
+    "dev": "nuxt example/basic",
+    "dev:typescript": "nuxt-ts example/typescript",
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
-    "release": "standard-version"
+    "test": "jest",
+    "build": "tsc -p .",
+    "release": "yarn build && standard-version --prerelease && yarn publish"
   },
   "dependencies": {
     "@toast-ui/vue-editor": "^1.1.1"
