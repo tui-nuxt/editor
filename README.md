@@ -19,7 +19,9 @@
     </a>
 </div>
 
+\
 [📖 Release Notes](./CHANGELOG.md)
+
 
 ## 🏗 Setup
 1. Add `@tui-nuxt/editor` dependency to your project
